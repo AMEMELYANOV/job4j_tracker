@@ -59,12 +59,13 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new Exit()
+                new Exit(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
                 "Menu." + System.lineSeparator() +
-                        "0. Exit Program" + System.lineSeparator()
+                        "0. Exit Program" + System.lineSeparator() +
+                        System.lineSeparator() + "=== Exit Program ====" + System.lineSeparator()
         ));
     }
     @Test
@@ -89,7 +90,8 @@ public class StartUITest {
                         item + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. Show all items" + System.lineSeparator() +
-                        "1. Exit Program" + System.lineSeparator()
+                        "1. Exit Program" + System.lineSeparator() +
+                        System.lineSeparator() + "=== Exit Program ====" + System.lineSeparator()
         ));
     }
 
@@ -120,7 +122,8 @@ public class StartUITest {
                         "No items with this name were found" + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. Find items by name" + System.lineSeparator() +
-                        "1. Exit Program" + System.lineSeparator()
+                        "1. Exit Program" + System.lineSeparator() +
+                        System.lineSeparator() + "=== Exit Program ====" + System.lineSeparator()
         ));
     }
 
@@ -151,7 +154,8 @@ public class StartUITest {
                         "Item with this id not found" + System.lineSeparator() +
                         "Menu." + System.lineSeparator() +
                         "0. Find item by Id" + System.lineSeparator() +
-                        "1. Exit Program" + System.lineSeparator()
+                        "1. Exit Program" + System.lineSeparator() +
+                        System.lineSeparator() + "=== Exit Program ====" + System.lineSeparator()
         ));
     }
 
