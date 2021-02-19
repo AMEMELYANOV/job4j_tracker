@@ -59,7 +59,7 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new Exit(out)
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
@@ -79,7 +79,7 @@ public class StartUITest {
         tracker.add(item);
         UserAction[] actions = {
                 new ShowAction(out),
-                new Exit(out)
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
@@ -106,7 +106,7 @@ public class StartUITest {
         tracker.add(item);
         UserAction[] actions = {
                 new FindByNameAction(out),
-                new Exit(out)
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
@@ -138,7 +138,7 @@ public class StartUITest {
         tracker.add(item);
         UserAction[] actions = {
                 new FindByIdAction(out),
-                new Exit(out)
+                new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
@@ -158,5 +158,4 @@ public class StartUITest {
                         System.lineSeparator() + "=== Exit Program ====" + System.lineSeparator()
         ));
     }
-
 }
