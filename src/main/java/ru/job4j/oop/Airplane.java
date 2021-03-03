@@ -1,14 +1,20 @@
 package ru.job4j.oop;
 
-public class Airplane implements Vehicle{
+public class Airplane implements Vehicle {
     private String name;
 
-    public Airplane(){}
+    public Airplane() {
 
-    public Airplane(String name){this.name = name;}
+    }
+
+    public Airplane(String name) {
+        this.name = name;
+    }
 
     @Override
-    public String getName() {return name;}
+    public String getName() {
+        return name;
+    }
 
     @Override
     public void move() {

@@ -1,6 +1,6 @@
 package ru.job4j.inheritance;
 
-public class Programmer extends Engineer{
+public class Programmer extends Engineer {
 
     private String languageOfProgramming;
 
@@ -8,7 +8,8 @@ public class Programmer extends Engineer{
 
     }
 
-    public Programmer(String name, String surname, String education, String birthday, String category, String languageOfProgramming) {
+    public Programmer(String name, String surname, String education,
+                      String birthday, String category, String languageOfProgramming) {
         super(name, surname, education, birthday, category);
         this.languageOfProgramming = languageOfProgramming;
     }

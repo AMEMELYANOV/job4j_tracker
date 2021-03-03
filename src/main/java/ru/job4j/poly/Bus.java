@@ -3,9 +3,11 @@ package ru.job4j.poly;
 public class Bus implements Transport {
     private double fuelPrice = 45.50;
 
-    public Bus() {}
+    public Bus() { }
 
-    public Bus(double fuelPrice) {this.fuelPrice = fuelPrice;}
+    public Bus(double fuelPrice) {
+        this.fuelPrice = fuelPrice;
+    }
 
     public double getFuelPrice() {
         return fuelPrice;

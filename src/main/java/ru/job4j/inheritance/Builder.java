@@ -1,14 +1,15 @@
 package ru.job4j.inheritance;
 
-public class Builder extends Engineer{
+public class Builder extends Engineer {
 
     private String currentWork;
 
-    public Builder(){
+    public Builder() {
 
     }
 
-    public Builder(String name, String surname, String education, String birthday, String category, String currentWork) {
+    public Builder(String name, String surname, String education, String birthday,
+                   String category, String currentWork) {
         super(name, surname, education, birthday, category);
         this.currentWork = currentWork;
     }

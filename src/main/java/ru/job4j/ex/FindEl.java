@@ -20,8 +20,7 @@ public class FindEl {
         String key = "d";
         try {
             System.out.println(FindEl.indexOf(value, key));
-        }
-        catch (ElementNotFoundException e) {
+        } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
     }

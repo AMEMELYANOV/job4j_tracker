@@ -41,21 +41,27 @@ public class Item {
         this.name = name;
     }
 
-    public LocalDateTime getCreated() { return created; }
+    public LocalDateTime getCreated() {
+        return created;
+    }
 
     @Override
     public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", created=" + created +
-                '}';
+        return "Item{"
+                + "id=" + id
+                + ", name='" + name + '\''
+                + ", created=" + created
+                + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Item item = (Item) o;
         return id == item.id && Objects.equals(name, item.name);
     }

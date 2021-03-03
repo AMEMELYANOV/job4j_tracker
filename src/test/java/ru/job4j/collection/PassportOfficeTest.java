@@ -17,7 +17,7 @@ public class PassportOfficeTest {
     }
 
     @Test
-    public void notInMap () {
+    public void notInMap() {
         Citizen citizen = new Citizen("2f44a", "Petr Arsentev");
         PassportOffice office = new PassportOffice();
         office.add(citizen);

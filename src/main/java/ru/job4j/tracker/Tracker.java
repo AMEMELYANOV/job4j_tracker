@@ -8,9 +8,11 @@ public final class Tracker {
     private final List<Item> items = new ArrayList<>();
     private int ids = 1;
 
-    private Tracker() {}
+    private Tracker() {
 
-    public static Tracker getInstance(){
+    }
+
+    public static Tracker getInstance() {
         if (instance == null) {
             instance = new Tracker();
         }
@@ -38,7 +40,9 @@ public final class Tracker {
         return rslItems;
     }
 
-    public List<Item> findAll() { return items; }
+    public List<Item> findAll() {
+        return items;
+    }
 
     private int indexOf(int id) {
         int rsl = -1;
