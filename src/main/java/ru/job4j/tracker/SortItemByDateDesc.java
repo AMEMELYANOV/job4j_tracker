@@ -5,6 +5,6 @@ import java.util.Comparator;
 public class SortItemByDateDesc implements Comparator<Item> {
     @Override
     public int compare(Item item1, Item item2) {
-        return -item1.getCreated().compareTo(item2.getCreated());
+        return item2.getCreated().compareTo(item1.getCreated());
     }
 }
