@@ -1,3 +1,5 @@
+package ru.job4j.lambda;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -8,7 +10,6 @@ public class LambdaUsage {
             System.out.println("compare - " + right.length() + " : " + left.length());
             return Integer.compare(right.length(), left.length());
         };
-
         List<String> lst = Arrays.asList("C", "BB", "CCCC", "AAA");
         lst.sort(cmpDescSize);
         for (String s : lst) {
