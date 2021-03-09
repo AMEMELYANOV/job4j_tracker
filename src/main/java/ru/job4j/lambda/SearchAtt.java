@@ -6,21 +6,21 @@ import java.util.function.Predicate;
 
 public class SearchAtt {
 
-    public static List<Attachment> filterSize(List<Attachment> list) {
+    public static List<Attachment> filterSize(List<Attachment> list, Integer size) {
         Predicate<Attachment> pred = new Predicate<Attachment>() {
             @Override
             public boolean test(Attachment attachment) {
-                return attachment.getSize() > 100;
+                return attachment.getSize() > size;
             }
         };
         return filter(list, pred);
     }
 
-    public static List<Attachment> filterName(List<Attachment> list) {
+    public static List<Attachment> filterName(List<Attachment> list, String name) {
         Predicate<Attachment> pred = new Predicate<Attachment>() {
             @Override
             public boolean test(Attachment attachment) {
-                return attachment.getName().contains("bug");
+                return attachment.getName().contains(name);
             }
         };
         return filter(list, pred);
