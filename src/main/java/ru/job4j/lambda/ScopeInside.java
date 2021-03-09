@@ -8,8 +8,9 @@ public class ScopeInside {
         int total = 0;
         for (int i = 0; i < number.length; i++) {
             int num = number[i];
-            total += add(
-                    () ->  num
+            int tempTotal = total;
+            total = add(
+                    () -> tempTotal + num
             );
         }
         System.out.println(total);
