@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Article {
+public class ArticleOld {
     public static boolean generateBy(String origin, String line) {
         boolean rsl = true;
         List<String> originArr = new ArrayList<>(Arrays.asList(delPuct(origin).split(" ")));

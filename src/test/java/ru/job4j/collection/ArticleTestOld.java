@@ -5,12 +5,12 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class ArticleTest {
+public class ArticleTestOld {
 
     @Test
     public void whenLineGnrTrue() {
         assertThat(
-                Article.generateBy(
+                ArticleOld.generateBy(
                         "Мама мыла раму и окно",
                         "мыла окно"
                 ),
@@ -21,7 +21,7 @@ public class ArticleTest {
     @Test
     public void whenLineGnrFalse() {
         assertThat(
-                Article.generateBy(
+                ArticleOld.generateBy(
                         "Мама мыла раму и окно",
                         "мыла пол"
                 ),
@@ -32,7 +32,7 @@ public class ArticleTest {
     @Test
     public void whenLongTextTrue() {
         assertThat(
-                Article.generateBy(
+                ArticleOld.generateBy(
                         "Мой дядя самых честных правил, "
                                 + "Когда не в шутку занемог, "
                                 + "Он уважать себя заставил "
@@ -56,7 +56,7 @@ public class ArticleTest {
     @Test
     public void whenLongTextFalse() {
         assertThat(
-                Article.generateBy(
+                ArticleOld.generateBy(
                         "Мой дядя самых честных правил, "
                                 + "Когда не в шутку занемог, "
                                 + "Он уважать себя заставил "
