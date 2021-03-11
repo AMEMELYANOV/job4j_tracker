@@ -9,9 +9,9 @@ public class School {
     Map<String, Student> collect(List<Student> students, Predicate<Student> predict) {
         return students.stream()
                 .filter(predict)
-                .distinct()
                 .collect(Collectors.toMap(
-                        student -> student.getSurname(),
-                        student -> student));
+                        Student::getSurname,
+                        student -> student,
+                        (student1, student2) -> student1));
     }
 }
