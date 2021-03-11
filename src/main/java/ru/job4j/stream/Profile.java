@@ -14,13 +14,8 @@ public class Profile {
         this.address = address;
     }
 
-    List<Address> collect(List<Profile> profiles) {
-        return profiles
-                .stream()
-                .map(profile -> profile.address)
-                .distinct()
-                .sorted(Comparator.comparing(Address::getCity))
-                .collect(Collectors.toList());
+    public Address getAddress() {
+        return address;
     }
 }
 
