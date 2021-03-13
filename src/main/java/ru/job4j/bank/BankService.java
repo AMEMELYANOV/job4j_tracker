@@ -60,10 +60,8 @@ public class BankService {
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
         if (user != null) {
-            return users.entrySet()
+            return users.get(user)
                     .stream()
-                    .filter(u -> u.getKey().equals(user))
-                    .flatMap(u -> u.getValue().stream())
                     .filter(a -> a.getRequisite().equals(requisite))
                     .findFirst()
                     .orElse(null);
