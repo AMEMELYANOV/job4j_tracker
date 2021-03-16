@@ -41,11 +41,10 @@ public class BankService {
      * @return пользователь
      */
     public Optional<User> findByPassport(String passport) {
-        Optional<User> rsl = users.keySet()
+        return  users.keySet()
                 .stream()
                 .filter(u -> u.getPassport().equals(passport))
                 .findFirst();
-        return rsl.isPresent() ? rsl : Optional.empty();
     }
 
     /**
