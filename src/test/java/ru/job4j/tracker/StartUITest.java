@@ -18,7 +18,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0"}
         );
-        Tracker tracker = Tracker.getInstance();
+        Store tracker = new SqlTracker();
         List<UserAction> actions = new ArrayList<>(Arrays.asList(
                 new Exit()
         ));
@@ -35,7 +35,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "1"}
         );
-        Tracker tracker = Tracker.getInstance();
+        Store tracker = new SqlTracker();
         Item item = new Item("Item");
         tracker.add(item);
         List<UserAction> actions = new ArrayList<>(Arrays.asList(
@@ -61,7 +61,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item", "0", "Item1", "1"}
         );
-        Tracker tracker = Tracker.getInstance();
+        Store tracker = new SqlTracker();
         Item item = new Item("Item");
         tracker.add(item);
         List<UserAction> actions = new ArrayList<>(Arrays.asList(
@@ -94,7 +94,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "1", "0", "2", "1"}
         );
-        Tracker tracker = Tracker.getInstance();
+        Store tracker = new SqlTracker();
         Item item = new Item("Item");
         tracker.add(item);
         List<UserAction> actions = new ArrayList<>(Arrays.asList(
@@ -127,7 +127,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"1", "0"}
         );
-        Tracker tracker = Tracker.getInstance();
+        Store tracker = new SqlTracker();
         List<UserAction> actions = new ArrayList<>(Arrays.asList(
                 new Exit()
         ));
